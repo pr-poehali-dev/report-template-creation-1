@@ -158,6 +158,28 @@
     .report-section {
       break-inside: avoid;
       page-break-inside: avoid;
+      margin-bottom: 0.5rem;
     }
+
+    .report-header {
+      background-color: #f3f4f6 !important;
+      border-bottom: 1px solid #d1d5db !important;
+    }
+
+    .footer-dark {
+      background-color: #374151 !important;
+      color: white !important;
+    }
+  }
+
+  /* Loading states */
+  .disabled\\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+
+  /* Focus improvements */
+  .field-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   }
 }
