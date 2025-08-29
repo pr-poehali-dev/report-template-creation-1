@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +98,66 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+  }
+}
+
+@layer components {
+  .report-section {
+    @apply bg-white border border-gray-300 rounded-lg p-6 mb-6;
+  }
+
+  .report-header {
+    @apply bg-gray-100 px-4 py-3 rounded-t-lg border-b border-gray-300 font-semibold text-gray-800;
+  }
+
+  .confidential-notice {
+    @apply bg-gray-50 border border-gray-300 rounded-lg p-4 text-sm text-gray-700;
+  }
+
+  .footer-dark {
+    @apply bg-gray-800 text-white;
+  }
+
+  .field-input {
+    @apply w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+  }
+
+  /* Print styles */
+  @media print {
+    .print\\:hidden {
+      display: none !important;
+    }
+
+    .print\\:p-4 {
+      padding: 1rem !important;
+    }
+
+    .print\\:bg-white {
+      background-color: white !important;
+    }
+
+    .print\\:border-black {
+      border-color: black !important;
+    }
+
+    .print\\:bg-gray-200 {
+      background-color: #e5e7eb !important;
+    }
+
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .report-section {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
   }
 }
